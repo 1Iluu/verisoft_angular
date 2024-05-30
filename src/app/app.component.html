@@ -1,1 +1,29 @@
-<h1>Hola mundo</h1>
+<mat-toolbar color="accent">
+    <mat-icon>menu</mat-icon>
+    <button mat-button [matMenuTriggerFor]="menuHome">Home</button> 
+    <button mat-button [matMenuTriggerFor]="menuPaciente">Paciente</button> 
+    <button mat-button [matMenuTriggerFor]="menuOncologo">Onocolo</button> 
+    <button mat-button [matMenuTriggerFor]="menuAdmin">Admin</button>
+
+
+  </mat-toolbar>
+  
+  <mat-menu #menuHome="matMenu">
+    <button mat-menu-item routerLink="/peliculas">Bienvenidos</button>
+    <button mat-menu-item routerLink="/peliculas/nuevo">Nosotros</button>
+  </mat-menu>
+
+  <mat-menu #menuPaciente="matMenu">
+    <button mat-menu-item routerLink="/peliculas">ga</button>
+    <button mat-menu-item routerLink="/peliculas/nuevo">ga</button>
+  </mat-menu>
+  <mat-menu #menuOncologo="matMenu">
+    <button mat-menu-item routerLink="/peliculas">ga</button>
+    <button mat-menu-item routerLink="/peliculas/nuevo">ga</button>
+  </mat-menu>
+  <mat-menu #menuAdmin="matMenu">
+    <button mat-menu-item routerLink="/peliculas">ga</button>
+    <button mat-menu-item routerLink="/peliculas/nuevo">ga</button>
+  </mat-menu>
+
+  <router-outlet></router-outlet>
