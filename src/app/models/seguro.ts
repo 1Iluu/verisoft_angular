@@ -1,7 +1,7 @@
 export class Seguro{
-    Seguro_ID:number=0;
-    TipoSeguro:string="";
-    DescSeguro:string="";
+    idseguro:number=0;
+    nombreseguro:string="";
+    tiposeguro:string="";
    
 }
 
