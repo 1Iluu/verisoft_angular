@@ -9,10 +9,11 @@ export const routes: Routes = [
         redirectTo: 'landing', pathMatch: 'full'
       },
     {
-        path:'landin',component:LandinpageComponent
+        path:'landin',
+        component:LandinpageComponent
     },
     {
-        path:'login',component:LoginComponent
+        path:'',component:LandinpageComponent
     },
     {
         path:'seguro',component:PacienteComponent 
