@@ -16,7 +16,7 @@ export const routes: Routes = [
         path:'',component:LandinpageComponent
     },
     {
-        path:'seguro',component:PacienteComponent 
+        path:'seguros',component:PacienteComponent 
     },
     {
         path:'login',component:LoginComponent

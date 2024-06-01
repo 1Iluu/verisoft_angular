@@ -21,7 +21,7 @@ export class ListarsegurosComponent implements OnInit {
   displayedColumns: string[] = 
   [
   'codigo', 
-  'Seguro', 
+  'seguro', 
   'descripcion'
   ];
 

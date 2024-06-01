@@ -5,12 +5,12 @@ import { Seguro } from '../models/seguro';
 
 
 
-const base_url=environment.csbase
+const base_url = environment.csbase
 @Injectable({
   providedIn: 'root'
 })
 export class SeguroService {
-  private url ='http://localhost:8081/seguros'
+  private url =`${base_url}/seguros`
 
   constructor(private hhtp:HttpClient) { }
   list(){
