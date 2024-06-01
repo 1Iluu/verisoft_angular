@@ -17,5 +17,8 @@ export const routes: Routes = [
     },
     {
         path:'seguro',component:PacienteComponent 
+    },
+    {
+        path:'login',component:LoginComponent
     }
 ];
