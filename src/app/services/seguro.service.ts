@@ -10,7 +10,7 @@ const base_url=environment.csbase
   providedIn: 'root'
 })
 export class SeguroService {
-  private url = '$(base_url)/seguros'
+  private url ='http://localhost:8081/seguros'
 
   constructor(private hhtp:HttpClient) { }
   list(){
