@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-
+import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-landinpage',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet],
   templateUrl: './landinpage.component.html',
   styleUrl: './landinpage.component.css'
 })

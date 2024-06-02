@@ -37,7 +37,7 @@ body {
     transition: .3s all ease; }
     a, a:hover {
       text-decoration: none !important; }
-  
+ 
   .hero {
     height: 100vh;
     width: 100%;
@@ -361,3 +361,4 @@ body {
           padding-top: 30px !important;
           padding-bottom: 30px !important; } }
   
+      
