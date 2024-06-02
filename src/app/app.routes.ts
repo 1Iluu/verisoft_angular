@@ -6,14 +6,11 @@ import { LoginComponent } from './components/login/login.component';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'landing', pathMatch: 'full'
+        redirectTo: '', pathMatch: 'full'
       },
     {
         path:'landin',
         component:LandinpageComponent
-    },
-    {
-        path:'',component:LandinpageComponent
     },
     {
         path:'seguros',component:PacienteComponent 
