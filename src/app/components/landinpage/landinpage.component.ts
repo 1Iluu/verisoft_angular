@@ -5,7 +5,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './landinpage.component.html',
-  styleUrl: './landinpage.component.css'
+  styleUrl:    './landinpage.component.css'
 })
 export class LandinpageComponent {
 
