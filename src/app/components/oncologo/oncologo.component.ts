@@ -1,18 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { ListaralergiasComponent } from './listaralergias/listaralergias.component';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-oncologo',
   standalone: true,
-  imports: [ListaralergiasComponent,RouterOutlet],
+  imports: [],
   templateUrl: './oncologo.component.html',
   styleUrl: './oncologo.component.css'
 })
-export class oncologoComponent implements OnInit{
-  constructor(public route: ActivatedRoute){}
-  ngOnInit(): void {
-    
-  }
+export class OncologoComponent {
 
 }
