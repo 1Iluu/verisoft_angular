@@ -11,8 +11,7 @@ export const routes: Routes = [
         redirectTo: 'landing', pathMatch: 'full'
       },
     {
-        path:'landin',
-        component:LandinpageComponent
+        path:'landin',component:LandinpageComponent
     },
     {
         path:'',component:LandinpageComponent
@@ -25,5 +24,9 @@ export const routes: Routes = [
     },
     {
         path:'alergias',component:oncologoComponent 
-    }
+    },
+    {
+        path:'cirugias',component:PacienteComponent 
+    },
+    
 ];
