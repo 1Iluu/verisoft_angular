@@ -13,6 +13,7 @@ export const routes: Routes = [
     {
         path:'landin',component:LandinpageComponent
     },
+
     {
         path:'',component:LandinpageComponent
     },

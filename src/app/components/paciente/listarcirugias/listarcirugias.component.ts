@@ -18,7 +18,7 @@ export class ListarcirugiasComponent implements OnInit{
   displayedColumns: string[]=
   [
     'id',
-    'descripcion'
+    'Descripcioncirugias'
   ];
   
   dataSource:MatTableDataSource<Cirugias> = new MatTableDataSource()

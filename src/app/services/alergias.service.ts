@@ -8,7 +8,7 @@ const base_url=environment.csbase
   providedIn: 'root'
 })
 export class AlergiasService {
-  private url=`${base_url}/alergia`
+  private url=`${base_url}/alergias`
   constructor(private http:HttpClient) { }
 
   list(){
