@@ -5,7 +5,7 @@ import { ListarsegurosComponent } from '../paciente/listarseguros/listarseguros.
 @Component({
   selector: 'app-landinpage',
   standalone: true,
-  imports: [RouterOutlet,ListarsegurosComponent],
+  imports: [RouterOutlet,ListarsegurosComponent,RouterLink],
   templateUrl: './landinpage.component.html',
   styleUrl:    './landinpage.component.css'
 })
