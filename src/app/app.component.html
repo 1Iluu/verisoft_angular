@@ -1,4 +1,4 @@
-<mat-toolbar color="accent" *ngIf="verificar()">
+<mat-toolbar color="accent" *ngIf="verificar()" >
     
     <button mat-button [matMenuTriggerFor]="menuHome">Home</button> 
     <button mat-button [matMenuTriggerFor]="menuPaciente">Paciente</button> 
@@ -35,7 +35,7 @@
   </mat-menu>
 
   <mat-menu #menuLogin="matMenu">
-    <button mat-menu-item routerLink="/landin">Salir</button>
+    <button mat-menu-item routerLink="/">Salir</button>
   </mat-menu>
 
   <router-outlet></router-outlet>
