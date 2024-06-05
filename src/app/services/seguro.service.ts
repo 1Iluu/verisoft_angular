@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/enviroment';
 import { HttpClient } from '@angular/common/http';
 import { Seguro } from '../models/seguro';
+import { Subject } from 'rxjs';
 
 
 
@@ -11,9 +12,19 @@ const base_url = environment.csbase
 })
 export class SeguroService {
   private url =`${base_url}/seguros`
-
+private listaCambio = new Subject<Seguro[]>()
   constructor(private hhtp:HttpClient) { }
   list(){
     return this.hhtp.get<Seguro[]>(this.url)
+  }
+  inser(s:Seguro){
+    return this.hhtp.post(this.url,s)
+
+  }
+  setList(listaNueva: Seguro[]){
+    this.listaCambio.next(listaNueva);
+  }
+  getList(){
+    return this.listaCambio.asObservable();
   }
 }
