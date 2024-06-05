@@ -3,6 +3,7 @@ import { PacienteComponent } from './components/paciente/paciente.component';
 import { LandinpageComponent } from './components/landinpage/landinpage.component';
 import { LoginComponent } from './components/login/login.component';
 import { oncologoComponent } from './components/oncologo/oncologo.component';
+import { ListarcirugiasComponent } from './components/paciente/listarcirugias/listarcirugias.component';
 
 
 export const routes: Routes = [
@@ -27,7 +28,7 @@ export const routes: Routes = [
         path:'alergias',component:oncologoComponent 
     },
     {
-        path:'cirugias',component:PacienteComponent 
+        path:'cirugias',component:ListarcirugiasComponent 
     },
     
 ];
