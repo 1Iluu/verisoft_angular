@@ -17,8 +17,6 @@ export class LoginComponent {
   username: string = ""
   password: string = ""
   mensaje: string = ""
-  login(
-     [routerLink]="[ '/home' ]"
-  ) {}
+  
   cambiarFormulario(){}
 }
