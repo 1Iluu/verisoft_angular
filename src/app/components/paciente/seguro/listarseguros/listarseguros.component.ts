@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { Seguro } from '../../../models/seguro';
-import { SeguroService } from '../../../services/seguro.service';
+import { Seguro } from '../../../../models/seguro';
+import { SeguroService } from '../../../../services/seguro.service';
+
 
 export interface PeriodicElement {
   codigo: number;
