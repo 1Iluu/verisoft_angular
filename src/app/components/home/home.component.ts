@@ -7,11 +7,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 
 
+
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
-  imports: 
-   [
+  imports: [
     RouterOutlet,
     MatToolbarModule,
     MatIconModule,
@@ -19,13 +19,10 @@ import { CommonModule } from '@angular/common';
     MatButtonModule,
     RouterLink,
     CommonModule,
-    ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  ],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class AppComponent {
-  title = 'verisoft_angular';
+export class HomeComponent {
 
-
-  verificar(){}
 }
