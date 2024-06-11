@@ -4,7 +4,7 @@ import { LandinpageComponent } from './components/landinpage/landinpage.componen
 import { LoginComponent } from './components/login/login.component';
 
 import { PacienteComponent } from './components/paciente/paciente.component';
-
+import { segGuard } from './guard/seguridad.guard';
 import { HomeComponent } from './components/home/home.component';
 import { ListarsegurosComponent } from './components/paciente/seguro/listarseguros/listarseguros.component';
 import { CrearseguroComponent } from './components/paciente/seguro/crearseguro/crearseguro.component';
@@ -20,10 +20,14 @@ export const routes: Routes = [
     path: 'landing', component: LandinpageComponent
   },
   {
-    path: 'login', component: LoginComponent
+    path: 'login', component: LoginComponent,
+    
   },
+
+
   {
-    path: 'home',component: HomeComponent
+    path: 'home',component: HomeComponent,
+    canActivate: [segGuard], // solo construcciones, se debe agregar a cada uno
     
   },
 
@@ -33,7 +37,8 @@ export const routes: Routes = [
             {path:'nuevo',component:CrearseguroComponent},
             {path:'ediciones/:id',component:CrearseguroComponent}
                    
-    ]
+    ],
+    canActivate: [segGuard], // solo construcciones, se debe agregar a cada uno
 
 }
 
