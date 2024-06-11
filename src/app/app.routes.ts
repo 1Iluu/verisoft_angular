@@ -2,7 +2,11 @@ import { Routes } from '@angular/router';
 <<<<<<< HEAD
 import { LandinpageComponent } from './components/landinpage/landinpage.component';
 import { LoginComponent } from './components/login/login.component';
+
+import { PacienteComponent } from './components/paciente/paciente.component';
+
 import { HomeComponent } from './components/home/home.component';
+import { ListarsegurosComponent } from './components/paciente/seguro/listarseguros/listarseguros.component';
 import { CrearseguroComponent } from './components/paciente/seguro/crearseguro/crearseguro.component';
 import { SeguroComponent } from './components/paciente/seguro/seguro.component';
 import { PacienteComponent } from './components/paciente/paciente.component';
@@ -16,20 +20,19 @@ import { CrearEditarEspecialidadComponent } from './components/oncologo/especial
 import { TipoTratamientoComponent } from './components/paciente/tipo-tratamiento/tipo-tratamiento.component';
 
 export const routes: Routes = [
+ 
   {
     path: '',
-    redirectTo: 'landing',
-    pathMatch: 'full',
+    redirectTo: 'landing', pathMatch: 'full'
   },
   {
-    path: 'landing',
-    component: LandinpageComponent,
+    path: 'landing', component: LandinpageComponent
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'login', component: LoginComponent
   },
   {
+<<<<<<< HEAD
     path: '',
     component: DashboardLayoutComponent,
     children: [
@@ -103,4 +106,24 @@ export const routes: Routes = [
         path:'login',component:LoginComponent
     }
 >>>>>>> parent of 91e569c (Merge branch 'JoseCardenas' into develop)
+=======
+    path: 'home',component: HomeComponent
+    
+  },
+
+  {
+    path:'seguros',component:SeguroComponent,
+    children:[
+            {path:'nuevo',component:CrearseguroComponent},
+            {path:'ediciones/:id',component:CrearseguroComponent}
+                   
+    ]
+
+}
+
+
+
+
+    
+>>>>>>> parent of 7391ad8 (fix: files indent)
 ];

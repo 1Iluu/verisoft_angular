@@ -3,7 +3,13 @@ import { environment } from '../../environments/enviroment';
 import { HttpClient } from '@angular/common/http';
 import { Seguro } from '../models/seguro';
 
+<<<<<<< HEAD
 const base_url = environment.csbase;
+=======
+
+
+const base_url = environment.csbase
+>>>>>>> parent of 7391ad8 (fix: files indent)
 @Injectable({
   providedIn: 'root',
 })

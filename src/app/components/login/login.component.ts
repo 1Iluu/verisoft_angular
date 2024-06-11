@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
   selector: 'app-login',
   standalone: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
   imports: [
     FormsModule,
     MatFormFieldModule,
@@ -19,10 +20,14 @@ import { MatButtonModule } from '@angular/material/button';
 =======
   imports: [FormsModule,MatFormFieldModule,CommonModule, MatInputModule,MatButtonModule ],
 >>>>>>> parent of 91e569c (Merge branch 'JoseCardenas' into develop)
+=======
+  imports: [FormsModule,MatFormFieldModule,CommonModule, MatInputModule,MatButtonModule,RouterLink ],
+>>>>>>> parent of 7391ad8 (fix: files indent)
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrl: './login.component.css'
 })
 export class LoginComponent {
+<<<<<<< HEAD
 <<<<<<< HEAD
   username: string = '';
   password: string = '';
@@ -36,4 +41,11 @@ export class LoginComponent {
   login() {}
   cambiarFormulario(){}
 >>>>>>> parent of 91e569c (Merge branch 'JoseCardenas' into develop)
+=======
+  username: string = ""
+  password: string = ""
+  mensaje: string = ""
+  
+  cambiarFormulario(){}
+>>>>>>> parent of 7391ad8 (fix: files indent)
 }
