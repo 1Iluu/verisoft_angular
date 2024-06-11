@@ -30,39 +30,26 @@
         <span>Por favor digite su usuario y contrasena</span>
           <mat-form-field class="example-full-width">
             <mat-label>usuario</mat-label>
-            <input matInput placeholder="Username"   />
+            <input matInput placeholder="Username" [(ngModel)]="username"  />
           </mat-form-field>
           <br />
           <mat-form-field class="example-full-width">
             <mat-label>Password</mat-label>
             <input
-              type="password"
-              matInput
-              placeholder="Password"
-              [(ngModel)]="password"
-              [ngModelOptions]="{standalone: true}"
+            type="password"
+            matInput
+            placeholder="Password"
+            [(ngModel)]="password"
             />
           </mat-form-field>
           <br>
           <a href="#">Olvidaste tu contrasena?</a>
           <br />
-          <button mat-raised-button color="warn" id="btn-signin"  routerLink="/home">Ingresaar</button>
+          <button mat-raised-button color="primary" (click)="login()">Ingresar</button>
         </form>
       </div>
       <div class="toggle-container">
-        <div class="toggle">
-            <div class="toggle-panel toggle-left" >
-                <h1>Welcome Back!</h1>
-                <p>Enter your personal details to use all of site features</p>
-                <button class="hidden" id="login" (click)="cambiarFormulario()">Sign In</button>
-            </div>
-            <div class="toggle-panel toggle-right" >
-                <h1>Bienvenido a Verisoft!</h1>
-                <p>Registrate si aun no tienes una cuenta en Verisoft!</p>
-                <button class="hidden" id="register" (click)="cambiarFormulario()">Sign Up</button>
-                <button class="hidden"   >Volver</button>
-            </div>
-        </div>
+        
     </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
