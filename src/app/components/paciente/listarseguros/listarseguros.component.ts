@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { Seguro } from '../../../../models/seguro';
-import { SeguroService } from '../../../../services/seguro.service';
-import { RouterLink } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
-
+import { Seguro } from '../../../models/seguro';
+import { SeguroService } from '../../../services/seguro.service';
 
 export interface PeriodicElement {
   codigo: number;
@@ -16,18 +13,24 @@ export interface PeriodicElement {
 @Component({
   selector: 'app-listarseguros',
   standalone: true,
-  imports: [MatTableModule,RouterLink,MatButtonModule],
+  imports: [MatTableModule],
   templateUrl: './listarseguros.component.html',
   styleUrl: './listarseguros.component.css'
 })
 export class ListarsegurosComponent implements OnInit {
   displayedColumns: string[] =
   [
+<<<<<<< HEAD:src/app/components/paciente/seguro/listarseguros/listarseguros.component.ts
   'codigo',
   'seguro',
   'descripcion',
   'accion01',
   'accion02'
+=======
+  'codigo', 
+  'seguro', 
+  'descripcion'
+>>>>>>> parent of 91e569c (Merge branch 'JoseCardenas' into develop):src/app/components/paciente/listarseguros/listarseguros.component.ts
   ];
 
   dataSource:MatTableDataSource<Seguro> = new MatTableDataSource()
@@ -36,16 +39,5 @@ export class ListarsegurosComponent implements OnInit {
     this.sS.list().subscribe((data)=>{
       this.dataSource=new MatTableDataSource(data)
     })
-    this.sS.getList().subscribe((data)=>{
-      this.dataSource=new MatTableDataSource(data)
-    })
-  }
-  deletes(id:number){
-    this.sS.delete(id).subscribe((data)=>{
-      this.sS.list().subscribe((data)=>{
-        this.sS.setList(data)
-      })
-    })
-
   }
 }

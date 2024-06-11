@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+<<<<<<< HEAD
 import { LandinpageComponent } from './components/landinpage/landinpage.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
@@ -78,4 +79,28 @@ export const routes: Routes = [
       }
     ],
   },
+=======
+import { PacienteComponent } from './components/paciente/paciente.component';
+import { LandinpageComponent } from './components/landinpage/landinpage.component';
+import { LoginComponent } from './components/login/login.component';
+
+export const routes: Routes = [
+    {
+        path: '',
+        redirectTo: 'landing', pathMatch: 'full'
+      },
+    {
+        path:'landin',
+        component:LandinpageComponent
+    },
+    {
+        path:'',component:LandinpageComponent
+    },
+    {
+        path:'seguros',component:PacienteComponent 
+    },
+    {
+        path:'login',component:LoginComponent
+    }
+>>>>>>> parent of 91e569c (Merge branch 'JoseCardenas' into develop)
 ];

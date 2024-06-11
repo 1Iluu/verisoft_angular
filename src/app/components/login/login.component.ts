@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
-
 @Component({
   selector: 'app-login',
   standalone: true,
+<<<<<<< HEAD
   imports: [
     FormsModule,
     MatFormFieldModule,
@@ -17,13 +16,24 @@ import { RouterLink } from '@angular/router';
     MatButtonModule,
     RouterLink,
   ],
+=======
+  imports: [FormsModule,MatFormFieldModule,CommonModule, MatInputModule,MatButtonModule ],
+>>>>>>> parent of 91e569c (Merge branch 'JoseCardenas' into develop)
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
+<<<<<<< HEAD
   username: string = '';
   password: string = '';
   mensaje: string = '';
 
   cambiarFormulario() {}
+=======
+  username: string = ""
+  password: string = ""
+  mensaje: string = ""
+  login() {}
+  cambiarFormulario(){}
+>>>>>>> parent of 91e569c (Merge branch 'JoseCardenas' into develop)
 }
