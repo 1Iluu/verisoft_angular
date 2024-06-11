@@ -13,7 +13,7 @@ const base_url = environment.csbase
 export class SeguroService {
   private url =`${base_url}/seguros`
 private listaCambio = new Subject<Seguro[]>()
-  constructor(private hhtp:HttpClient) { }
+  constructor(private hhtp:HttpClient) {}
   list(){
     return this.hhtp.get<Seguro[]>(this.url)
   }
@@ -27,4 +27,18 @@ private listaCambio = new Subject<Seguro[]>()
   getList(){
     return this.listaCambio.asObservable();
   }
+
+
+  listId(id: number){
+    return this.hhtp.get<Seguro>(`${this.url}/${id}`)
+ }
+
+ update(s: Seguro){
+   return this.hhtp.put(this.url, s);
+ }
+
+ delete(id:number)
+ {
+   return this.hhtp.delete(`${this.url}/${id}`)
+ }
 }
