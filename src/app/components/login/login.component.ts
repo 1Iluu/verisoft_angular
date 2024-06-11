@@ -9,14 +9,21 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,MatFormFieldModule,CommonModule, MatInputModule,MatButtonModule,RouterLink ],
+  imports: [
+    FormsModule,
+    MatFormFieldModule,
+    CommonModule,
+    MatInputModule,
+    MatButtonModule,
+    RouterLink,
+  ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  username: string = ""
-  password: string = ""
-  mensaje: string = ""
-  
-  cambiarFormulario(){}
+  username: string = '';
+  password: string = '';
+  mensaje: string = '';
+
+  cambiarFormulario() {}
 }

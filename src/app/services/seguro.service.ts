@@ -4,8 +4,6 @@ import { HttpClient } from '@angular/common/http';
 import { Seguro } from '../models/seguro';
 import { Subject } from 'rxjs';
 
-
-
 const base_url = environment.csbase
 @Injectable({
   providedIn: 'root'

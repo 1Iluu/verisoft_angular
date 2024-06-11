@@ -6,8 +6,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 
-
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -21,8 +19,6 @@ import { CommonModule } from '@angular/common';
     CommonModule,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}
