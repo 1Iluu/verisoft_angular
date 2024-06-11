@@ -3,7 +3,7 @@ import { MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Alergias } from '../../../models/alergias';
 import { AlergiasService } from '../../../services/alergias.service';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';

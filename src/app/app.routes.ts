@@ -13,7 +13,6 @@ import { DashboardLayoutComponent } from './components/layouts/dashboard-layout/
 import { EspecialidadComponent } from './components/oncologo/especialidad/especialidad.component';
 import { CrearEditarEspecialidadComponent } from './components/oncologo/especialidad/crear-editar-especialidad/crear-editar-especialidad.component';
 import { TipoTratamientoComponent } from './components/paciente/tipo-tratamiento/tipo-tratamiento.component';
-import { OncologoComponent } from './components/oncologo/oncologo.component';
 
 export const routes: Routes = [
   {
@@ -47,7 +46,7 @@ export const routes: Routes = [
       },
       {
         path: 'alergias',
-        component: OncologoComponent,
+        component: ListaralergiasComponent,
         children: [
           { path: 'nuevo', component: CreaeditaalergiasComponent },
           { path: 'ediciones/:id', component: CreaeditaalergiasComponent },
