@@ -21,10 +21,10 @@ export interface PeriodicElement {
   styleUrl: './listarseguros.component.css'
 })
 export class ListarsegurosComponent implements OnInit {
-  displayedColumns: string[] = 
+  displayedColumns: string[] =
   [
-  'codigo', 
-  'seguro', 
+  'codigo',
+  'seguro',
   'descripcion',
   'accion01',
   'accion02'

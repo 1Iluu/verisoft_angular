@@ -10,6 +10,8 @@ import { CreaeditacirugiasComponent } from './components/paciente/creaeditacirug
 import { CreaeditaalergiasComponent } from './components/oncologo/creaeditaalergias/creaeditaalergias.component';
 import { ListaralergiasComponent } from './components/oncologo/listaralergias/listaralergias.component';
 import { DashboardLayoutComponent } from './components/layouts/dashboard-layout/dashboard-layout.component';
+import { EspecialidadComponent } from './components/oncologo/especialidad/especialidad.component';
+import { CrearEditarEspecialidadComponent } from './components/oncologo/especialidad/crear-editar-especialidad/crear-editar-especialidad.component';
 
 export const routes: Routes = [
   {
@@ -61,6 +63,14 @@ export const routes: Routes = [
           { path: 'ediciones/:id', component: CreaeditacirugiasComponent },
         ],
       },
+      {
+        path: 'especialidades',
+        component: EspecialidadComponent,
+        children: [
+          { path: 'nuevo', component: CrearEditarEspecialidadComponent },
+          { path: 'ediciones/:id', component: CrearEditarEspecialidadComponent },
+        ]
+      }
     ],
   },
 ];

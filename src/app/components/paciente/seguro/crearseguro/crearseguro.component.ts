@@ -26,13 +26,13 @@ import { Seguro } from '../../../../models/seguro';
     MatButtonModule,
   ],
   templateUrl: './crearseguro.component.html',
-  styleUrl: './crearseguro.component.css'
+  styleUrl: './crearseguro.component.css',
 })
-export class CrearseguroComponent implements OnInit{
+export class CrearseguroComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   seguro: Seguro = new Seguro();
-  id:number =0;
-  edicion:boolean=false;
+  id: number = 0;
+  edicion: boolean = false;
 
   listaTipos: { value: string; viewValue: string }[] = [
     { value: 'Privado', viewValue: 'Privado' },
@@ -44,23 +44,20 @@ export class CrearseguroComponent implements OnInit{
     private formBuilber: FormBuilder,
     private sS: SeguroService,
     private router: Router,
-    private route:ActivatedRoute,
-
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-  
-    this.route.params.subscribe((data:Params)=>{
-      this.id=data[`id`];
-      this.edicion=data[`id`]!=null;
-      this.init()
-    })
+    this.route.params.subscribe((data: Params) => {
+      this.id = data[`id`];
+      this.edicion = data[`id`] != null;
+      this.init();
+    });
 
     this.form = this.formBuilber.group({
-      codigo: ['',],
+      codigo: [''],
       nombre: ['', Validators.required],
       tipo: ['', Validators.required],
-      
     });
   }
 
@@ -75,30 +72,26 @@ export class CrearseguroComponent implements OnInit{
             this.sS.setList(data);
           });
         });
-      }else{
-
-
-       this.sS.inser(this.seguro).subscribe((data) => {
-       this.sS.list().subscribe((data) => {
-        this.sS.setList(data);
-      });
-     });
+      } else {
+        this.sS.inser(this.seguro).subscribe((data) => {
+          this.sS.list().subscribe((data) => {
+            this.sS.setList(data);
+          });
+        });
+      }
+      this.router.navigate(['seguros']);
     }
-    this.router.navigate(['seguros']);
+  }
+
+  init() {
+    if (this.edicion) {
+      this.sS.listId(this.id).subscribe((data) => {
+        this.form = new FormGroup({
+          codigo: new FormControl(data.idseguro),
+          nombre: new FormControl(data.nombreseguro),
+          tipo: new FormControl(data.tiposeguro),
+        });
+      });
+    }
   }
 }
-
-init(){
-  if(this.edicion){
-    this.sS.listId(this.id).subscribe((data)=>{
-      this.form=new FormGroup({
-        codigo:new FormControl(data.idseguro),
-        nombre:new FormControl(data.nombreseguro),
-        tipo:new FormControl(data.tiposeguro),
-      })
-    })
-  }
-}
-}
-
-
