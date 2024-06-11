@@ -8,6 +8,7 @@ import { PacienteComponent } from './components/paciente/paciente.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListarsegurosComponent } from './components/paciente/seguro/listarseguros/listarseguros.component';
 import { CrearseguroComponent } from './components/paciente/seguro/crearseguro/crearseguro.component';
+import { SeguroComponent } from './components/paciente/seguro/seguro.component';
 
 export const routes: Routes = [
  
@@ -27,16 +28,11 @@ export const routes: Routes = [
   },
 
   {
-    path:'paciente',component:PacienteComponent,
+    path:'seguros',component:SeguroComponent,
     children:[
-        
-            {path:'seguros',component:ListarsegurosComponent},
             {path:'nuevo',component:CrearseguroComponent},
             {path:'ediciones/:id',component:CrearseguroComponent}
-              
-          
-        
-
+                   
     ]
 
 }

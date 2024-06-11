@@ -27,6 +27,7 @@ export class ListarsegurosComponent implements OnInit {
   'seguro', 
   'descripcion',
   'accion01',
+  'accion02'
   ];
 
   dataSource:MatTableDataSource<Seguro> = new MatTableDataSource()
@@ -38,5 +39,13 @@ export class ListarsegurosComponent implements OnInit {
     this.sS.getList().subscribe((data)=>{
       this.dataSource=new MatTableDataSource(data)
     })
+  }
+  deletes(id:number){
+    this.sS.delete(id).subscribe((data)=>{
+      this.sS.list().subscribe((data)=>{
+        this.sS.setList(data)
+      })
+    })
+
   }
 }
